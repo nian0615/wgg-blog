@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push --force --quiet "https://${GITHUB_TOKEN}@github.com/huixiongyu/blog.git" master:gh-pages
+git push --force --quiet "https://${GITHUB_TOKEN}@github.com/nian0615/wgg-blog.git" master:gh-pages
 
 cd -

@@ -2,9 +2,9 @@ module.exports = {
     markdown: {
         lineNumbers: true
     },
-    base: '/blog/',
-    title: '灰熊の博客',
-    description: '灰熊的博客',
+    base: '/wgg-blog/',
+    title: '王果果 の博客',
+    description: '王果果的博客',
     head: [
         ['link', { rel: 'icon', href: '/flower.ico' }],
     ],
