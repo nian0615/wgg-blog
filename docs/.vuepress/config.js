@@ -44,7 +44,8 @@ module.exports = {
                     title: 'JavaScript',
                     collapsable: true,
                     children: [
-                        '/blog/JavaScript/JsUp'
+                        '/blog/JavaScript/JsUp',
+                        '/blog/JavaScript/ES6'
                     ]
                 },
                 {
