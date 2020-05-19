@@ -6,11 +6,11 @@ heroImage: /cube.jpg
 actionText: 开始 →
 actionLink: /core/
 features:
-- title: Vue开发
-  details: 请立即阅读我的文档！
-- title: React开发
-  details: Learn once，Write anywhere!
-- title: 小程序
-  details: 用完即走！
-footer: Copyright © 2019-present huixiongyu
+  - title: Vue开发
+    details: 努力努力！
+  # - title: React开发
+  #   details: Learn once，Write anywhere!
+  - title: 小程序+uniapp
+    details: 学习学习！
+footer: Copyright © 2020-present wangguoguo
 ---

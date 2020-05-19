@@ -6,11 +6,13 @@ module.exports = {
     title: '王果果 の博客',
     description: '王果果的博客',
     head: [
-        ['link', { rel: 'icon', href: '/flower.ico' }],
+        ['link', {
+            rel: 'icon',
+            href: '/flower.ico'
+        }],
     ],
     themeConfig: {
-        nav: [
-            { 
+        nav: [{
                 text: "博客",
                 link: "/blog/"
             },
@@ -18,23 +20,21 @@ module.exports = {
                 text: "面试题",
                 link: "/interview/"
             },
+            /*  {
+                 text: "工作",
+                 link: "/work/"
+             }, */
             {
-                text: "工作",
-                link: "/work/"
-            },
-            { 
-                text: '阅读', 
+                text: '阅读',
                 link: "/book/"
             },
-            { 
-                text: 'Github', 
-                link: 'https://github.com/huixiongyu/blog'
+            {
+                text: 'Github',
+                link: 'https://github.com/nian0615'
             }
         ],
         sidebar: {
-            '/blog/': [
-                '',
-                {
+            '/blog/': [{
                     title: '生活学习',
                     collapsable: false,
                     children: [
@@ -42,17 +42,17 @@ module.exports = {
                     ]
                 },
                 {
-                    title:'JavaScript',
+                    title: 'JavaScript',
                     collapsable: true,
-                    children:[
-                      '/blog/JavaScript/Vue',
-                      '/blog/JavaScript/uni-app'
+                    children: [
+                        '/blog/JavaScript/Vue',
+                        '/blog/JavaScript/uni-app'
                     ]
                 },
                 {
-                    title:'Python',
+                    title: 'Python',
                     collapsable: true,
-                    children:[
+                    children: [
                         '/blog/Python/flask'
                     ]
                 },
@@ -120,20 +120,20 @@ module.exports = {
                     children: [
                         '/book/JavaScript/01-Object-Oriented-JavaScript',
                     ]
-                },                
+                },
                 {
-                    title:'Vue',
+                    title: 'Vue',
                     collapsable: false,
-                    children:[
-                      '/book/Vue/01-vue-up-and-running',
+                    children: [
+                        '/book/Vue/01-vue-up-and-running',
                     ]
                 },
                 {
-                    title:'React',
-                    children:[
+                    title: 'React',
+                    children: [
                         '/book/React/01-deep-learning-react-stack'
                     ]
-                }                
+                }
             ],
             '/work/': [
                 '',
@@ -153,9 +153,9 @@ module.exports = {
         displayAllHeaders: true,
         nextLinks: true,
         prevLinks: true,
-        lastUpdated: '更新时间', 
+        lastUpdated: '更新时间',
         docsDir: 'docs',
         editLinks: true,
         editLinkText: '帮助我完善这篇内容🙏'
-    }    
+    }
 }
