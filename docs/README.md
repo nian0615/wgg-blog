@@ -4,7 +4,7 @@ lang: zh-CN
 # heroText: 我的博客
 heroImage: /cube.jpg
 actionText: 开始 →
-actionLink: /core/
+actionLink: /blog/
 features:
   - title: Vue开发
     details: 努力努力！
