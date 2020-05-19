@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ES6 语法总结 | 王果果 の博客</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/wgg-blog/flower.ico">
+    <meta name="description" content="王果果的博客">
+    <link rel="preload" href="/wgg-blog/assets/css/0.styles.d238acda.css" as="style"><link rel="preload" href="/wgg-blog/assets/js/app.ca45e25c.js" as="script"><link rel="preload" href="/wgg-blog/assets/js/2.8fc15104.js" as="script"><link rel="preload" href="/wgg-blog/assets/js/14.b8a24311.js" as="script"><link rel="prefetch" href="/wgg-blog/assets/js/10.9cf5d783.js"><link rel="prefetch" href="/wgg-blog/assets/js/11.c2509bec.js"><link rel="prefetch" href="/wgg-blog/assets/js/12.26081e86.js"><link rel="prefetch" href="/wgg-blog/assets/js/13.54782f8e.js"><link rel="prefetch" href="/wgg-blog/assets/js/15.b54c8932.js"><link rel="prefetch" href="/wgg-blog/assets/js/16.0fe33668.js"><link rel="prefetch" href="/wgg-blog/assets/js/17.7e87af5e.js"><link rel="prefetch" href="/wgg-blog/assets/js/18.a6b7936f.js"><link rel="prefetch" href="/wgg-blog/assets/js/19.168714ed.js"><link rel="prefetch" href="/wgg-blog/assets/js/20.a007de3e.js"><link rel="prefetch" href="/wgg-blog/assets/js/21.227d690b.js"><link rel="prefetch" href="/wgg-blog/assets/js/22.efa53d7c.js"><link rel="prefetch" href="/wgg-blog/assets/js/23.84045e27.js"><link rel="prefetch" href="/wgg-blog/assets/js/24.4bdb00f6.js"><link rel="prefetch" href="/wgg-blog/assets/js/25.7203e13a.js"><link rel="prefetch" href="/wgg-blog/assets/js/26.f4263ba9.js"><link rel="prefetch" href="/wgg-blog/assets/js/27.aca6ac29.js"><link rel="prefetch" href="/wgg-blog/assets/js/28.79f91f79.js"><link rel="prefetch" href="/wgg-blog/assets/js/29.081fd03d.js"><link rel="prefetch" href="/wgg-blog/assets/js/3.356568c5.js"><link rel="prefetch" href="/wgg-blog/assets/js/30.f5e2f02b.js"><link rel="prefetch" href="/wgg-blog/assets/js/31.660ddadb.js"><link rel="prefetch" href="/wgg-blog/assets/js/32.90917185.js"><link rel="prefetch" href="/wgg-blog/assets/js/33.4af979da.js"><link rel="prefetch" href="/wgg-blog/assets/js/34.1f3dee64.js"><link rel="prefetch" href="/wgg-blog/assets/js/35.4d648c21.js"><link rel="prefetch" href="/wgg-blog/assets/js/36.c151129b.js"><link rel="prefetch" href="/wgg-blog/assets/js/37.7ed0feaa.js"><link rel="prefetch" href="/wgg-blog/assets/js/38.6a5153b8.js"><link rel="prefetch" href="/wgg-blog/assets/js/39.15859c36.js"><link rel="prefetch" href="/wgg-blog/assets/js/4.4f895811.js"><link rel="prefetch" href="/wgg-blog/assets/js/40.bdd7eddc.js"><link rel="prefetch" href="/wgg-blog/assets/js/41.18ade10d.js"><link rel="prefetch" href="/wgg-blog/assets/js/42.2613648b.js"><link rel="prefetch" href="/wgg-blog/assets/js/43.ea4079bb.js"><link rel="prefetch" href="/wgg-blog/assets/js/44.79496308.js"><link rel="prefetch" href="/wgg-blog/assets/js/45.3dac2741.js"><link rel="prefetch" href="/wgg-blog/assets/js/46.4086de34.js"><link rel="prefetch" href="/wgg-blog/assets/js/47.12f4ffd9.js"><link rel="prefetch" href="/wgg-blog/assets/js/48.95490709.js"><link rel="prefetch" href="/wgg-blog/assets/js/49.e7fcb375.js"><link rel="prefetch" href="/wgg-blog/assets/js/5.4ab70980.js"><link rel="prefetch" href="/wgg-blog/assets/js/50.6dac2f5e.js"><link rel="prefetch" href="/wgg-blog/assets/js/51.c15de6e9.js"><link rel="prefetch" href="/wgg-blog/assets/js/52.9f8609ac.js"><link rel="prefetch" href="/wgg-blog/assets/js/53.acc92034.js"><link rel="prefetch" href="/wgg-blog/assets/js/54.517fbb9a.js"><link rel="prefetch" href="/wgg-blog/assets/js/55.90f625c0.js"><link rel="prefetch" href="/wgg-blog/assets/js/56.3ab1e459.js"><link rel="prefetch" href="/wgg-blog/assets/js/57.02883de2.js"><link rel="prefetch" href="/wgg-blog/assets/js/58.ea9d13f0.js"><link rel="prefetch" href="/wgg-blog/assets/js/59.63cf3a83.js"><link rel="prefetch" href="/wgg-blog/assets/js/6.0b41ddbd.js"><link rel="prefetch" href="/wgg-blog/assets/js/60.811fe401.js"><link rel="prefetch" href="/wgg-blog/assets/js/61.fb55b21a.js"><link rel="prefetch" href="/wgg-blog/assets/js/62.ae13b9a0.js"><link rel="prefetch" href="/wgg-blog/assets/js/63.6025fb1f.js"><link rel="prefetch" href="/wgg-blog/assets/js/64.c07f485c.js"><link rel="prefetch" href="/wgg-blog/assets/js/7.7f18774a.js"><link rel="prefetch" href="/wgg-blog/assets/js/8.eadcb74c.js"><link rel="prefetch" href="/wgg-blog/assets/js/9.5766ad28.js">
+    <link rel="stylesheet" href="/wgg-blog/assets/css/0.styles.d238acda.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/wgg-blog/" class="home-link router-link-active"><!----> <span class="site-name">王果果 の博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/wgg-blog/blog/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="/wgg-blog/interview/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="https://github.com/nian0615" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/wgg-blog/blog/" class="nav-link router-link-active">
+  博客
+</a></div><div class="nav-item"><a href="/wgg-blog/interview/" class="nav-link">
+  面试题
+</a></div><div class="nav-item"><a href="https://github.com/nian0615" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Css</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>JavaScript</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/wgg-blog/blog/JavaScript/JsUp.html" class="sidebar-link">前端核心知识</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/wgg-blog/blog/JavaScript/JsUp.html#资料参考" class="sidebar-link">资料参考</a></li></ul></li><li><a href="/wgg-blog/blog/JavaScript/ES6.html" class="active sidebar-link">ES6 语法总结</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Uniapp</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="es6-语法总结"><a href="#es6-语法总结" class="header-anchor">#</a> ES6 语法总结</h1> <h5 id="新的声明方式"><a href="#新的声明方式" class="header-anchor">#</a> 新的声明方式</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>全局声明：var
+局部声明：let const
+优点：减少环境污染
+区别：
+1. var定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问。
+2.let定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问。
+3.const用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h5 id="变量的解构赋值"><a href="#变量的解构赋值" class="header-anchor">#</a> 变量的解构赋值</h5> <p>==数组的解构赋值==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>letl  [a,b,c]=[1,2,3];
+let [a, [b, c], d] = [1, [2, 3], 4]; //两边的结构必须一样
+let [foo = true] =[];
+console.log(foo); //控制台打印出true
+let [a, b = &quot;wgg&quot;] = [&quot;王&quot;, undefined]; // b还是取默认值 相当于没有赋值
+let [a, b = &quot;wgg&quot;] = [&quot;王&quot;, null]; // b是取null 相当于为空 ''
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>==对象的解构赋值==</p> <p>数组解构是根据位置解构 对象是根据 key 值解构</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let {foo,bar} = {foo:'JSPang',bar:'技术胖'};
+console.log(foo+bar); //控制台打印出了“JSPang技术胖”
+
+let ber;
+({ ber } = { ber: &quot;wang&quot; }); // 必须加括号  否则报错
+console.log(ber);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>==字符串解构==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let [a, b, c, d, e] = [&quot;wangg&quot;];
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h5 id="扩展运算符和-rest-运算符"><a href="#扩展运算符和-rest-运算符" class="header-anchor">#</a> 扩展运算符和 rest 运算符</h5> <p>==对象扩展运算符（…）==</p> <blockquote><p>当编写一个方法时，我们允许它传入的参数是不确定的。这时候可以使用对象扩展运算符来作参数</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>function wgg(...arg) {
+  console.log(arg[0]); // 1
+  console.log(arg[1]); // 2
+  console.log(arg[2]); // 3
+  console.log(arg[3]); // undefined
+}
+wgg(1, 2, 3);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>==扩展运算符的用处==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr1 = [&quot;www&quot;, &quot;jspang&quot;, &quot;com&quot;];
+
+let arr2 = arr1;
+arr2.push(&quot;zhui&quot;);
+console.log(arr1);  // 此时arr1被改变了[&quot;www&quot;, &quot;jspang&quot;, &quot;com&quot;, &quot;zhui&quot;]  因为我们这是对内存堆栈的引用，而不是真正的赋值
+
+let arr2 = [...arr1]; // 只追加arr1里面的元素给arr2 不是把整个数组给arr2
+arr2.push(&quot;zhui&quot;);
+console.log(arr1); // [&quot;www&quot;, &quot;jspang&quot;, &quot;com&quot;]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>==rest 运算符==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function rest(a, ...arg) {
+  console.log(a); // b
+  console.log(arg.length); // 4  默认取剩余不确定的参数
+  for (let val of arg) {
+    console.log(val); //  1  12 3  4  不用原始的for in 循环
+  }
+}
+rest(&quot;b&quot;, 1, 12, 3, 4);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h5 id="字符串模版"><a href="#字符串模版" class="header-anchor">#</a> 字符串模版</h5> <div class="language- line-numbers-mode"><pre class="language-text"><code>let a = &quot;我叫&quot;;
+let b = `${a}王果果呀,&lt;br&gt;&lt;b&gt;哈哈哈&lt;/b&gt;`;
+document.write(b);
+document.write(&quot;王念念||&quot;.repeat(3));
+// 支持运算符
+let a=1;
+let b=2;
+let result=`${a+b}`;
+document.write(result);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>==字符串查找==</p> <ul><li>includes</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>let jspang='技术胖';
+let blog = '非常高兴你能看到这篇文章，我是你的老朋友技术胖。这节课我们学习字符串模版。';
+document.write(blog.includes(jspang));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>需要注意的是：starts 和 ends 后边都要加 s</p></blockquote> <ul><li>判断开头是否存在</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>blog.startsWith(jspang);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>判断结尾是否存在</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>blog.endsWith(jspang);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>复制字符串</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>document.write('jspang|'.repeat(3));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h5 id="es6-中新增的数组知识（1）"><a href="#es6-中新增的数组知识（1）" class="header-anchor">#</a> ES6 中新增的数组知识（1）</h5> <p>==JSON 数组格式转换==</p> <ul><li>Array.from</li> <li>Array.of()</li> <li>find( )实例方法</li></ul> <hr> <p>所谓的实例方法就是并不是以 Array 对象开始的，而是必须有一个已经存在的数组，然后使用的方法，这就是实例方法,这里的 find 方法是从数组中查找。在 find 方法中我们需要传入一个匿名函数，函数需要传入三个参数：value：表示当前查找的值。
+index：表示当前查找的数组索引。
+arr：表示当前数组。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code> let wgg = {
+  &quot;0&quot;: &quot;王&quot;,
+  &quot;1&quot;: &quot;年&quot;,
+  &quot;2&quot;: &quot;念&quot;,
+  length: 3 // 加上这个length属性  就可以转换成数组
+};
+console.log(Array.from(wgg)); // [&quot;王&quot;, &quot;年&quot;, &quot;念&quot;]
+---------
+let arr = Array.of(3, 4, 5, 6);
+console.log(arr); // [3, 4, 5, 6]
+------------
+let arr=[1,2,3,4,5,6,7,8,9];
+console.log(arr.find(function(value,index,arr){
+    return value &gt; 5;
+}))  // 控制台输出了6，说明找到了符合条件的值，并进行返回了，如果找不到会显示undefined。
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h5 id="es6-中新增的数组知识（2）"><a href="#es6-中新增的数组知识（2）" class="header-anchor">#</a> ES6 中新增的数组知识（2）</h5> <ul><li>fill( )实例方法 【作用是把数组进行填充，它接收三个参数，第一个参数是填充的变量，第二个是开始填充的位置，第三个是填充到的位置】</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr3 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+arr3.fill(&quot;jspang&quot;, 2, 5);
+console.log(arr3); // [0, 1, &quot;jspang&quot;, &quot;jspang&quot;, &quot;jspang&quot;, 5, 6, 7, 8, 9]  索引为2开始 索引为5结束 索引为5就没有了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>==数组的遍历==</p> <blockquote><p>for…of 的循环可以避免我们开拓内存空间，增加代码运行效率，所以建议大家在以后的工作中使用 for…of 循环。有的小伙伴会说了，反正最后要转换成 ES5，没有什么差别，但是至少从代码量上我们少打了一些单词，这就是开发效率的提高。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','大胖逼逼叨']
+
+for (let item of arr){
+    console.log(item);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><blockquote><p>同时输出数组的内容和索引：我们用 entries()这个实例方法，配合我们的 for…of 循环就可以同时输出内容和索引了。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 此方法可以输出索引加item值
+let wggh = [&quot;wang&quot;, &quot;nian&quot;, &quot;hhh&quot;];
+for (let [index, val] of wggh.entries()) {
+  console.log(index + &quot;:&quot; + val);
+}
+--------
+// 此方法可以输出index值
+for (let index of arr.keys()) {
+  console.log(index);
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="es6-中的函数和数组补漏"><a href="#es6-中的函数和数组补漏" class="header-anchor">#</a> ES6 中的函数和数组补漏</h5> <p>==对象的函数解构==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 对象的解构赋值   免得打 json.a  json.b
+let json = {
+  a: &quot;王&quot;,
+  b: &quot;念念&quot;
+};
+//  fun 里面的形参 必须和json 里面的数据一样  否则报错
+function fun({ a, b = 1 }) {
+  console.log(a + b);
+}
+fun(json);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>==数组的函数解构==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let a = [1, 2, 3];
+function wgg(a, b, c) {
+  console.log(a, b, c); // 1 2 3
+}
+wgg(...a);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>==in 的用法==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>对象判断
+// in 判断对象里面是否有这个值
+let obj = {
+  a: &quot;技术胖&quot;,
+  b: &quot;王哈哈哈&quot;
+};
+console.log(&quot;a&quot; in obj); // true
+console.log(&quot;c&quot; in obj); // false
+
+数组判断
+// 先来看一下ES5判断的弊端，以前会使用length属性进行判断，为0表示没有数组元素。但是这并不准确，或者说真实开发中有弊端
+// 判断空位
+let kong = [, , ,];
+console.log(1 in kong); // false 表示数组下标为1的地方没有这个值 为空
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>==数组的遍历方法==</p> <p>1.forEach</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','前端教程'];
+
+arr.forEach((val,index)=&gt;console.log(index,val));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>forEach 循环的特点是会自动省略为空的数组元素，相当于直接给我们筛空了。当是有时候也会给我们帮倒忙</p></blockquote> <p>2.filter</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','前端教程'];
+
+arr.filter(x=&gt;console.log(x));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>3.some</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','前端教程'];
+
+arr.some(x=&gt;console.log(x));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>4.map</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','前端教程'];
+
+console.log(arr.map(x=&gt;'web'));  // map在这里起到一个替换的作用
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>5.join()方法</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','前端教程'];
+
+console.log(arr.join('|'));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>join()方法就是在数组元素中间，加了一些间隔，开发中很有用处。</p></blockquote> <p>6.toString()方法</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let arr=['jspang','技术胖','前端教程'];
+
+console.log(arr.toString());  // 转换时只是是用逗号隔开了
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h5 id="es6-中对象"><a href="#es6-中对象" class="header-anchor">#</a> ES6 中对象</h5> <p>==对象赋值==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let skill = &quot;王&quot;;
+let name = &quot;念念&quot;;
+let poi = { name, skill };
+console.log(poi); // {name: &quot;念念&quot;, skill: &quot;王&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>==对象 Key 值构建==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let wen = &quot;zekun&quot;;
+let objj = {
+  [wen]: &quot;wang&quot;
+};
+console.log(objj); // {zekun: &quot;wang&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>==Object.is( ) 对象比较==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// === 同值相等  is严格相等
+console.log(+0 === -0); // true  都是0
+console.log(NaN === NaN); // false  不知道具体是哪一个对象
+
+console.log(Object.is(+0, -0)); // false  一个正  一个负
+console.log(Object.is(NaN, NaN)); // true  都是NaN
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>==Object.assign( )合并对象==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let a = { name: &quot;王&quot; };
+let b = { sex: &quot;女&quot; };
+let c = { age: &quot;22&quot; };
+let d = Object.assign(a, b, c);
+console.log(d); // {name: &quot;王&quot;, sex: &quot;女&quot;, age: &quot;22&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h5 id="symbol-在对象中的作用"><a href="#symbol-在对象中的作用" class="header-anchor">#</a> Symbol 在对象中的作用</h5> <p>==声明 Symbol==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var a = new String;
+var b = new Number;
+var c = new Boolean;
+var d = new Array;
+var e = new Object;
+var f= Symbol();
+console.log(typeof(d));
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>==Symbol 的打印==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var g = Symbol('jspang');
+console.log(g);
+console.log(g.toString());  // 没有toString的是红字，toString的是黑字
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>==Symbol 在对象中的应用==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>var jspang = Symbol();
+var obj={
+    [jspang]:'技术胖'
+}
+console.log(obj[jspang]);
+obj[jspang]='web';
+console.log(obj[jspang]);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>==Symbol 对象元素的保护作用==</p> <blockquote><p>在对象中有很多值，但是循环输出时，并不希望全部输出，那我们就可以使用 Symbol 进行保护</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>//没有进行保护的写法：
+
+var obj={name:'jspang',skill:'web',age:18};
+
+for (let item in obj){
+    console.log(obj[item]);
+}
+//现在我不想别人知道我的年龄，这时候我就可以使用Symbol来进行循环保护。
+
+let obj={name:'jspang',skill:'web'};
+let age=Symbol();
+obj[age]=18;
+for (let item in obj){
+    console.log(obj[item]);
+}
+console.log(obj);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h5 id="set-和-weakset-数据结构"><a href="#set-和-weakset-数据结构" class="header-anchor">#</a> Set 和 WeakSet 数据结构</h5> <p>==Set 的声明==</p> <blockquote><p>set 不是数据类型，而是数据结构。它是 ES6 中新的东西，并且很有用处。Set 的数据结构是以数组的形式构建的。类似后端转给前端的 json 结构</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>let setArry = new Set([&quot;wang&quot;, &quot;hha&quot;, &quot;heihie&quot;]);
+console.log(setArry); // Set(3) {&quot;wang&quot;, &quot;hha&quot;, &quot;heihie&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>==Set 值的增删查==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>setArry.add(&quot;前端&quot;); // 追加方法
+console.log(setArry); // Set(4) {&quot;wang&quot;, &quot;hha&quot;, &quot;heihie&quot;, &quot;前端&quot;}
+setArry.delete(&quot;前端&quot;); // 删除方法
+console.log(setArry); // Set(4) {&quot;wang&quot;, &quot;hha&quot;, &quot;heihie&quot;}
+console.log(setArry.has(&quot;前端&quot;)); // false  // 判断是否有这个字符
+setArry.clear(); // 清除所有
+console.log(setArry); // Set{}
+
+// set的循环 for…of…循环
+let arr = new Set([&quot;1&quot;, &quot;2&quot;, &quot;34&quot;]);
+for (let item of arr) {
+  console.log(item); // 1  2 34
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>==size 属性==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let setArr = new Set([&quot;wgg&quot;, &quot;王果果&quot;, &quot;web&quot;, &quot;jspang&quot;]);
+for (let item of setArr) {
+  console.log(item); // 最后一个wgg没有打印出来  因为重复了
+}
+console.log(setArr.size); // 3
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>==WeakSet 的声明==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>let weakObj = new WeakSet();  // 不能直接在里面面赋值对象  必须通过add的方法添加
+let obj = { a: &quot;wgg&quot;, b: &quot;wnn&quot; };
+// ==
+let obj1 = obj;
+weakObj.add(obj);
+weakObj.add(obj1);
+console.log(weakObj);  // WeakSet {a: &quot;wgg&quot;, b: &quot;wnn&quot;}
+// ====
+let obj1 = { a: &quot;wgg&quot;, b: &quot;wnn&quot; };  // 开辟了一个新的空间
+weakObj.add(obj);
+weakObj.add(obj1);
+console.log(weakObj);  // WeakSet {a: &quot;wgg&quot;, b: &quot;wnn&quot;,a: &quot;wgg&quot;, b: &quot;wnn&quot;}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h5 id="map-数据结构"><a href="#map-数据结构" class="header-anchor">#</a> map 数据结构</h5> <blockquote><p>Map 的灵活性要更好，你可以把它看成一种特殊的键值对，但你的 key 可以设置成数组/对象，值也可以设置成字符串</p></blockquote> <p>==Json 和 map 格式的对比==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 普通的json结构
+let json = {
+  name: &quot;wgg&quot;,
+  skill: &quot;web&quot;
+};
+console.log(json.name);
+// map 结构
+var map = new Map();
+map.set(json, &quot;wgg&quot;);
+console.log(map); //  Map(1) {{name: &quot;wgg&quot;, skill: &quot;web&quot;} =&gt; &quot;wgg&quot;}
+map.set(&quot;wgg2&quot;, json);
+console.log(map); // Map(2) {{name: &quot;wgg&quot;, skill: &quot;web&quot;} =&gt; &quot;wgg&quot;, &quot;wgg2&quot; =&gt; {name: &quot;wgg&quot;, skill: &quot;web&quot;}}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>==map 的增删查==</p> <blockquote><p>get size clear() delete() has</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// get取值
+console.log(map.get(json)); // wgg
+console.log(map.get(&quot;wgg2&quot;)); // {name: &quot;wgg&quot;, skill: &quot;web&quot;}
+// 删除
+map.delete(json);
+console.log(map); //  Map(1) {{&quot;wgg2&quot; =&gt; {name: &quot;wgg&quot;, skill: &quot;web&quot;}}
+console.log(map.size); // map里面还剩下的个数 1
+
+map.clear(); // 清除所有
+console.log(map.has(&quot;wgg2&quot;)); // true 查找方法  返回true or false
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h5 id="用-proxy-进行预处理"><a href="#用-proxy-进行预处理" class="header-anchor">#</a> 用 Proxy 进行预处理</h5> <p>==声明 Proxy==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>new Proxy（{},{}）// 两个花括号，第一个花括号就相当于我们方法的主体，后边的花括号就是Proxy代理处理区域，相当于我们写钩子函数的地方
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>==get 属性，set 属性，apply 的使用==</p> <blockquote><p>get 属性是在你得到某对象属性值时预处理的方法，他接受三个参数：target：得到的目标值；key：目标的 key 值，相当于对象的属性；property：这个不太常用，用法还在研究中，还请大神指教。</p></blockquote> <blockquote><p>set 属性是值你要改变 Proxy 属性值时，进行的预先处理。它接收四个参数。target:目标值；key：目标的 Key 值；value：要改变的值；receiver：改变前的原始值。</p></blockquote> <blockquote><p>apply 的作用是调用内部的方法，它使用在方法体是一个匿名函数时</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>let pro = new Proxy(
+  {
+    add: function(val) {
+      return val + 1;
+    },
+    name: &quot;my name is wgg&quot;
+  },
+  {
+    get: function(target, key, property) {
+      console.log(target); // {name: &quot;my name is wgg&quot;, add: ƒ}
+      console.log(key); // name
+      return target[key]; // my name is wgg
+    },
+    set: function(target, key, value, receiver) {
+      console.log(`setting ${key} = ${value}`); // setting name = 王果果啊
+      return (target[key] = value); // 必须得返回值
+    }
+  }
+);
+console.log(pro.name); // my name is wgg
+pro.name = &quot;王果果啊&quot;;
+console.log(pro.name); // 王果果啊
+
+// apply方法
+let target = function() {
+  return &quot;我叫王果果&quot;;
+};
+let handel = {
+  apply(target, ctx, args) {
+    console.log(&quot;jinlail&quot;);
+    return Reflect.apply(...arguments); // 需要死记硬背
+  }
+};
+let pRo = new Proxy(target, handel);
+console.log(pRo()); // 我叫王果果
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h5 id="promise-对象的使用"><a href="#promise-对象的使用" class="header-anchor">#</a> promise 对象的使用</h5> <blockquote><p>这个过程是有一定的顺序的，你必须保证上一步完成，才能顺利进行下一步。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>let state=1;
+function step1(resolve,reject){
+    console.log('1.开始-洗菜做饭');
+    if(state==1){
+        resolve('洗菜做饭--完成');
+    }else{
+        reject('洗菜做饭--出错');
+    }
+}
+
+
+function step2(resolve,reject){
+    console.log('2.开始-坐下来吃饭');
+    if(state==1){
+        resolve('坐下来吃饭--完成');
+    }else{
+        reject('坐下来吃饭--出错');
+    }
+}
+
+
+function step3(resolve,reject){
+    console.log('3.开始-收拾桌子洗完');
+     if(state==1){
+        resolve('收拾桌子洗完--完成');
+    }else{
+        reject('收拾桌子洗完--出错');
+    }
+}
+
+new Promise(step1).then(function(val){
+    console.log(val);
+    return new Promise(step2);
+
+}).then(function(val){
+     console.log(val);
+    return new Promise(step3);
+}).then(function(val){
+    console.log(val);
+    return val;
+});
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div><h5 id="class-类的使用"><a href="#class-类的使用" class="header-anchor">#</a> class 类的使用</h5> <p>==类的声明==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Code{
+    name(val){
+        console.log(val);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>==类的使用==</p> <blockquote><p>我们已经声明了一个类，并在类里声明了 name 方法，现在要实例化类，并使用类中的方法</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>// 实例化类
+let wgg = new Code;
+wgg.name(&quot;王欢欢&quot;); // 王欢欢
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>==类的多方法声明==</p> <hr> <p>注意：1.多个函数的时候不用打分号；2.必须加 return 否则下面函数引用的时候会报错 undefined</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Code {
+  name(val) {
+    console.log(val);
+    return val; // 必须加return 否则下面函数引用的时候会报错undefined
+  }
+  skill(val) {
+    console.log(this.name(&quot;王哈哈哈哈&quot;) + val); // 引用类里面的函数 王哈哈哈哈skill
+  }
+}
+let wgg = new Code;
+wgg.name(&quot;王欢欢&quot;); // 王欢欢
+wgg.skill(&quot;skill&quot;);
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>==类的传参 constructor==</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Code {
+  //   类传参
+  constructor(a, b) {
+    this.a = a; //类设置
+    this.b = b;
+  }
+
+  add() {
+    return this.a + this.b;
+  }
+}
+// 实例化类
+let wgg = new Code(1, 2);
+console.log(wgg.add()); // 3 通过类传参
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>==class 的继承==</p> <blockquote><p>声明一个 Jichen 的新类并继承 Code 类，Jichen 新类里边为空，这时候我们实例化新类，并调用里边的 name 方法。结果也是可以调用到的。</p></blockquote> <div class="language- line-numbers-mode"><pre class="language-text"><code>class Code {
+  name(val) {
+    // console.log(val);
+    return val; // 必须加return 否则下面函数引用的时候会报错undefined
+  } //多个函数的时候不用打分号
+  skill(val) {
+    console.log(this.name(&quot;王哈哈哈哈&quot;) + val); // 引用类里面的函数 王哈哈哈哈skill
+  }
+}
+// 用 extends 方法继承Code里面的函数
+class Jichen extends Code {}
+let gt = new Jichen();
+gt.name(&quot;继承&quot;); //  继承
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">5/19/2020, 8:07:24 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/wgg-blog/blog/JavaScript/JsUp.html" class="prev">
+        前端核心知识
+      </a></span> <span class="next"><a href="/wgg-blog/blog/Uniapp/uni-app.html">
+        uni-app 入门
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/wgg-blog/assets/js/app.ca45e25c.js" defer></script><script src="/wgg-blog/assets/js/2.8fc15104.js" defer></script><script src="/wgg-blog/assets/js/14.b8a24311.js" defer></script>
+  </body>
+</html>
