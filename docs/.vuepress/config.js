@@ -24,10 +24,10 @@ module.exports = {
                  text: "工作",
                  link: "/work/"
              }, */
-            {
-                text: '阅读',
-                link: "/book/"
-            },
+            /*   {
+                  text: '阅读',
+                  link: "/book/"
+              }, */
             {
                 text: 'Github',
                 link: 'https://github.com/nian0615'
@@ -35,54 +35,37 @@ module.exports = {
         ],
         sidebar: {
             '/blog/': [{
-                    title: '生活学习',
-                    collapsable: false,
+                    title: 'Css',
+                    collapsable: true,
                     children: [
-                        '/blog/Personal/weekly2019'
+                        '/blog/Css/css'
                     ]
-                },
-                {
+                }, {
                     title: 'JavaScript',
                     collapsable: true,
                     children: [
-                        '/blog/JavaScript/Vue',
-                        '/blog/JavaScript/uni-app'
+                        '/blog/JavaScript/JsUp'
                     ]
                 },
                 {
-                    title: 'Python',
+                    title: 'Uniapp',
                     collapsable: true,
                     children: [
-                        '/blog/Python/flask'
+                        '/blog/Uniapp/uni-app'
+                    ]
+                },
+                {
+                    title: 'Vue',
+                    collapsable: true,
+                    children: [
+                        '/blog/Vue/vue'
                     ]
                 },
                 {
                     title: '数据库',
                     collapsable: true,
                     children: [
-                        '/blog/DB/use-mongodb'
-                    ]
-                },
-                {
-                    title: '生活',
-                    collapsable: true,
-                    children: [
-                        '/blog/Life/typecho-migration'
-                    ]
-                },
-                {
-                    title: 'Linux',
-                    collapsable: true,
-                    children: [
-                        '/blog/Linux/when-we-use-deepin'
-                    ]
-                },
-                {
-                    title: '个人成长',
-                    collapsable: true,
-                    children: [
-                        '/blog/Personal/learn-daily',
-                        '/blog/Personal/weekly2019'
+                        '/blog/DB/Learnmongodb'
                     ]
                 }
             ],

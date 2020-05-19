@@ -1,7 +1,7 @@
 ---
 home: true
 lang: zh-CN
-heroText: 我的博客
+# heroText: 我的博客
 heroImage: /cube.jpg
 actionText: 开始 →
 actionLink: /core/
